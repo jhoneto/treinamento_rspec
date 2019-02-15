@@ -6,6 +6,11 @@ RSpec.describe Student, type: :model do
     expect(student).to be_valid
   end
 
+  it "is valid with name and register faker" do
+    student = build(:student_faker)
+    expect(student).to be_valid
+  end
+
   it "is invalid without a name" do
     student = build(:student, name: '')
     student.valid?
