@@ -61,7 +61,7 @@ group :test do
   gem 'chromedriver-helper'
   
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.3'
-  gem "factory_bot_rails"
+  gem 'factory_bot_rails'
   #A library for generating fake data such as names, addresses, and phone numbers.
   gem 'faker', '~> 1.9', '>= 1.9.3'
 end
