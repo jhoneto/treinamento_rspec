@@ -14,6 +14,7 @@ RSpec.describe Student, type: :model do
     student.valid?
     expect(student.errors[:name]).to include("can't be blank")
   end
+  it {is_expected.to validate_presence_of :register}
 
   it "is invalid without a duplicate register" do
     student = Student.create({
@@ -30,7 +31,7 @@ RSpec.describe Student, type: :model do
   end
 
   it "is invalid without a register"
-  #it {is_expected.to validate_presence_of :register}
+  #
 
   it "is invalid with a invalid email" do
     student = Student.new({
