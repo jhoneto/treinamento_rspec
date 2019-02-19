@@ -13,7 +13,7 @@ RSpec.describe StudentsController, type: :controller do
     end    
   end
 
-  describe "#new" do
+  describe "#create" do
     it "add student with success" do
       student_params = attributes_for(:student)
       expect {
