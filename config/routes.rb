@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   devise_for :admins
   constraints SubdomainConstraint do
     devise_for :users
+
+    namespace :client do
+      resources :events
+    end
+
     root to: 'events#index'
   end
 

@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     return admin_companies_path if resource.class.to_s == "Admin"
-    return responsible_home_index_path if resource.class.to_s == "User"
+    return client_events_path if resource.class.to_s == "User"
   end
 
 end

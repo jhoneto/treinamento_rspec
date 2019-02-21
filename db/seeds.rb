@@ -7,7 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Admin.create({
-  email: 'jhamilton.oliveira@gmail.com',
-  password: '12345678'
-})
+# Admin.create({
+#   email: 'jhamilton.oliveira@gmail.com',
+#   password: '12345678'
+# })
+
+# Company.create({
+#   name: 'Demo',
+#   subdomain: 'demo'
+# })
+
+# Apartment::Tenant.switch! 'demo'
+
+# User.create({
+#   email: 'hamilton@demo.com.br',
+#   password: '1235678'
+# })
