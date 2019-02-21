@@ -62,6 +62,9 @@ group :test do
   gem 'factory_bot_rails'
   #A library for generating fake data such as names, addresses, and phone numbers.
   gem 'faker', '~> 1.9', '>= 1.9.3'
+  gem 'database_cleaner', '~> 1.7'
+  gem 'simplecov'
+  gem 'simplecov-rcov'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

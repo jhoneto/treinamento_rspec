@@ -1,6 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe CompaniesController, type: :controller do
+RSpec.describe Admin::CompaniesController, type: :controller do
+
+  before(:each) do
+    sign_in Admin.first # Using factory bot as an example
+  end
 
   describe "GET #index" do
     it "returns http success" do
