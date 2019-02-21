@@ -10,27 +10,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_15_143300) do
+ActiveRecord::Schema.define(version: 2019_02_21_142153) do
 
-  create_table "students", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "admins", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_admins_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "companies", force: :cascade do |t|
     t.string "name"
-    t.string "register"
-    t.string "address"
-    t.string "mother_name"
-    t.string "father_name"
-    t.integer "age"
-    t.string "email"
+    t.text "description"
+    t.string "subdomain"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "teachers", force: :cascade do |t|
+  create_table "events", force: :cascade do |t|
     t.string "name"
-    t.string "email"
-    t.integer "age"
-    t.string "discipline"
+    t.text "description"
+    t.datetime "start"
+    t.datetime "end"
+    t.integer "vacancies"
+    t.decimal "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "registers", force: :cascade do |t|
+    t.string "name"
+    t.string "cpf"
+    t.bigint "event_id"
+    t.string "email"
+    t.string "phone"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_registers_on_event_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end

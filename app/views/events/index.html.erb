@@ -1,0 +1,22 @@
+<h2>Lista publica de eventos</h2>
+
+<div class="companies row">
+  <div class="col-lg-10 col-lg-offset-1">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Evento</th>
+          <th>Preço</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @events.each do |event| %>
+          <tr>
+            <td><%= event.name %></td>
+            <td><%= event.value %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
