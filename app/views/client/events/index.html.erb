@@ -1,5 +1,11 @@
-<h2>Lista privada de eventos</h2>
-
+<div class="page-header">
+  <h1>
+    Eventos
+    <%= link_to t('.new', :default => t("helpers.links.new")),
+                new_client_event_path,
+                :class => 'btn btn-primary' %>
+  </h1>
+</div>
 <div class="companies row">
   <div class="col-lg-10 col-lg-offset-1">
     <table class="table table-striped">
@@ -7,6 +13,7 @@
         <tr>
           <th>Evento</th>
           <th>Preço</th>
+          <th>Ações</th>
         </tr>
       </thead>
       <tbody>
@@ -14,6 +21,11 @@
           <tr>
             <td><%= event.name %></td>
             <td><%= event.value %></td>
+            <td>
+              <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                edit_client_event_path(event.id),
+                :class => 'btn btn-primary' %>
+            </td>
           </tr>
         <% end %>
       </tbody>
