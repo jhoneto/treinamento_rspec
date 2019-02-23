@@ -36,7 +36,7 @@ class Client::EventsController < Client::BaseController
  
   private
   def event_params
-    params.require(:event).permit(:name, :description, :value, :start, :end, :vacancies)
+    params.require(:event).permit(:name, :description, :value, :start_date, :end_date, :vacancies)
   end
 
 end

@@ -58,8 +58,10 @@ RSpec.configure do |config|
     })
 
     Apartment::Tenant.drop('demo') rescue nil
+    Apartment::Tenant.drop('demo2') rescue nil
     # Create the default tenant for our tests
     Company.create!(name: 'Demo', subdomain: 'demo')
+    Company.create!(name: 'Demo2', subdomain: 'demo2')
   
   end
 
