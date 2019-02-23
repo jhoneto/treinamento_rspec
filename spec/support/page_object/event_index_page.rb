@@ -4,4 +4,8 @@ class EventIndexPage < BasePage
     page.find('.btn.btn-primary')
   end
 
+  def table_rows
+    page.all('')
+  end
+
 end

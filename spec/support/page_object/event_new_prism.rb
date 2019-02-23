@@ -6,5 +6,6 @@ class EventNewPrism < SitePrism::Page
   element :end_date, '#event_end_date'
   element :value, '#event_value'
   element :save_button, '.btn.btn-primary'
+  elements :errors, '.has-error'
   
 end

@@ -1,7 +1,9 @@
 class EventNewPage < BasePage
 
+  EVENT_NAME = '#event_name'
+
   def name
-    page.find('#event_name')
+    page.find(EVENT_NAME)
   end
 
   def vacancies

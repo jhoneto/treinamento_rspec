@@ -1,10 +1,10 @@
 <div class="form row">
   <div class="col-lg-10">
-    <%= form_with  model: [:client, @event], local: true, :html => { :class => "form-horizontal thought" } do |form| %>
+    <%= form_with  model: [:client, @event], local: true, :html => { :class => "form-horizontal event" } do |form| %>
       <% if @event.errors.any? %>
         <div id="error_expl" class="panel panel-danger">
           <div class="panel-heading">
-            <h3 class="panel-title"><%= pluralize(@thought.errors.count, "error") %> prohibited this thought from being saved:</h3>
+            <h3 class="panel-title"><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h3>
           </div>
           <div class="panel-body">
             <ul>

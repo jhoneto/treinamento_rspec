@@ -34,7 +34,7 @@ RSpec.describe Admin::CompaniesController, type: :controller do
         post :create, params: { company: company_params }
       }.to change(Company, :count).by(0)
     end
-    it "invalid without submain" do
+    it "invalid without subdomain" do
       company_params = attributes_for(:company, subdomain: nil)
       expect {
         post :create, params: { company: company_params }
