@@ -14,6 +14,10 @@ Rails.application.routes.draw do
       resources :events
     end
 
+    namespace :api do
+      resources :events
+    end
+
     root to: 'events#index'
   end
 
@@ -21,6 +25,5 @@ Rails.application.routes.draw do
     resources :companies
   end
   root to: 'welcome#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
 end
