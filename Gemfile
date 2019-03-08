@@ -67,6 +67,7 @@ group :test do
   gem 'simplecov-rcov'
   gem 'rails-controller-testing'
   gem 'site_prism', '~> 3.0', '>= 3.0.3'
+  gem 'cucumber-rails', '~> 1.6'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -22,19 +22,13 @@ RSpec.feature "Events", type: :feature do
     event_new_page = EventNewPage.new
     
     event_index_page.new_button.click
-    event_new_paevent_index_page.new_button.click
     event_new_page.name.set('Evento Teste')
     event_new_page.vacancies.set('50')
     event_new_page.start_date.set(Time.now)
     event_new_page.end_date.set(Time.now)
     event_new_page.value.set('1000')
-    event_new_page.save_button.clickge.name.set('Evento Teste')
-    event_new_page.vacancies.set('50')
-    event_new_page.start_date.set(Time.now)
-    event_new_page.end_date.set(Time.now)
-    event_new_page.value.set('1000')
     event_new_page.save_button.click
-
+    
     expect(page).to have_content("Evento Teste")    
   end
 

@@ -2,7 +2,7 @@ require 'capybara/rspec'
 require 'selenium-webdriver'
 
 Capybara.default_driver = :selenium
-Capybara.app_host = "http://lvh.me"
+Capybara.app_host = "http://teste.local"
 
 Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new app, browser: :chrome
