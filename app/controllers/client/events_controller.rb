@@ -5,7 +5,7 @@ class Client::EventsController < Client::BaseController
   end
 
   def new
-    @event = Event.new
+    @event = Event.new    
   end
 
   def create
@@ -21,6 +21,7 @@ class Client::EventsController < Client::BaseController
 
   def edit
     @event = Event.find(params[:id])
+    @comments = JSON.parse(HTTParty.get('https://jsonplaceholder.typicode.com/comments?postId=1').body)
   end
 
   def update

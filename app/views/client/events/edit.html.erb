@@ -3,3 +3,12 @@
 </div>
 
 <%= render 'form' %>
+
+<h5> Comentários </h5>
+<% @comments.each do |comment| %>
+  <dl>
+    <dt><%= comment["email"] %></dt>
+    <dd><%= comment["body"] %></dd>
+  </dl>
+  
+<% end %>

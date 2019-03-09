@@ -11,6 +11,8 @@ require 'simplecov-rcov'
 require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'site_prism'
+
+
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 SimpleCov.start 'rails'
 SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter

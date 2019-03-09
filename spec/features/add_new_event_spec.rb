@@ -4,6 +4,7 @@ RSpec.feature "Events", type: :feature do
   before(:each) do
     @user = create(:user)
     LoginHelper.login('demo', @user.email, @user.password)
+    
   end
 
   scenario 'User create new event' do    

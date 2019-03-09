@@ -68,6 +68,8 @@ group :test do
   gem 'rails-controller-testing'
   gem 'site_prism', '~> 3.0', '>= 3.0.3'
   gem 'cucumber-rails', '~> 1.6'
+  gem 'webmock', '~> 3.5', '>= 3.5.1'
+  gem 'capybara-screenshot', '~> 1.0', '>= 1.0.22'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -76,4 +78,5 @@ gem 'devise', '~> 4.6', '>= 4.6.1'
 gem 'apartment', '~> 2.2'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrapped'
-gem "jquery-rails"
+gem 'jquery-rails'
+gem 'httparty', '~> 0.16.4'
