@@ -19,11 +19,13 @@ Rails.application.routes.draw do
     end
 
     root to: 'events#index'
+    resources :registers, only: [:new, :create]
   end
 
   namespace :admin do
     resources :companies
   end
   root to: 'welcome#index'
+
   
 end
