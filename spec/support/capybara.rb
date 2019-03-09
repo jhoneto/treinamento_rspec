@@ -1,7 +1,9 @@
 require 'capybara/rspec'
 require 'selenium-webdriver'
 
-Capybara.app_host = "http://lvh.me"
+#Capybara.app_host = "http://lvh.me"
+
+Capybara.app_host = "http://teste.local"
 
 client = Selenium::WebDriver::Remote::Http::Default.new
 

@@ -59,7 +59,9 @@ Cucumber::Rails::Database.javascript_strategy = :truncation
 require 'selenium-webdriver'
 require 'capybara/cucumber'
 
-Capybara.app_host = "http://lvh.me"
+#Capybara.app_host = "http://lvh.me"
+
+Capybara.app_host = 'http://teste.local'
 
 client = Selenium::WebDriver::Remote::Http::Default.new
 

@@ -27,8 +27,6 @@ RSpec.feature "Events", type: :feature do
     expect(event_edit_page.name.value).to eq(@event.name)
     expect(page).to have_content('Comentários')
     expect(page).to have_content('emailt@teste.com.br')
-
-    
     
   end
 
